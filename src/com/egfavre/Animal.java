@@ -12,8 +12,8 @@ public class Animal {
     }
 
     //override JAVA built in method
-  //  @Override
-    //public String toString(){
-      //  return name;
+    @Override
+    public String toString(){
+        return name;
     }
 }
