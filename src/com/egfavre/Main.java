@@ -7,13 +7,26 @@ public class Main {
         Animal s = createAnimal("Snake");
         Animal h = createAnimal("Hawk");
 
+        //anonymous class
+        Animal a= new Reptile() {
+          //define class
+            @Override
+            public void makeSound() {
+                System.out.println("Croak!");
+            }
+        };
+        a.name = "alligator";
+
         d.makeSound();
         s.makeSound();
         h.makeSound();
+        a.makeSound();
+
 
         System.out.println(d);
         System.out.println(s);
         System.out.println(h);
+        System.out.println(a);
 
         //returns name instead of memory address
 
@@ -29,7 +42,7 @@ public class Main {
             case "Hawk":
                 return new Hawk();
         }
-        return new Animal();
+        return null;
     }
 
 
